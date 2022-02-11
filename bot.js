@@ -13,9 +13,9 @@ const { inspect } = require("util");
 let dev = ["681553671364018196"];
 const cmd = require("node-cmd");
 
-bot.login("")
+bot.login(process.env.TOKEN)
 global.mongoose = require('mongoose')
-mongoose.connect("", { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
+mongoose.connect("mongodb+srv://security:Copj4P2W1GdN61sc@cluster0.5ix8c.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
   console.log("✅ Connected to the database.");
 }).catch((err) => {
   console.log("❎ Unable to connect to the Mongodb database. Error:" + err);
@@ -61,7 +61,7 @@ bot.on("ready", async () => {
 /* let channel = bot.channels.cache.get("890671956054122587");
   channel.send(new Discord.MessageEmbed().setColor(Color).setTimestamp().setThumbnail(bot.user.displayAvatarURL()).setTitle("Whoami Status").addField("Prefix", "`s!`").addField("Status", "<:enable:840230134899671060> Online").addField("Servers", `${bot.guilds.cache.size}`));*/
   await bot.user.setStatus("online");
-  await bot.user.setActivity(`${prefix}help expert secuirty bot`, { type: "PLAYING" });
+  await bot.user.setActivity(`LF UP✨`, { type: "PLAYING" });
  
  
  });
